@@ -64,7 +64,7 @@ function tieneEmail(objetoUsuario) {
   // En ese caso retornar true. Caso contrario, false.
   // Tu código:
   return (
-    objetoUsuario.hasOwnProperty("email") &&
+    // objetoUsuario.hasOwnProperty("email") &&
     objetoUsuario.email !== null &&
     objetoUsuario.email !== undefined
   );
