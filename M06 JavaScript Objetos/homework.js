@@ -65,8 +65,7 @@ function tieneEmail(objetoUsuario) {
   // Tu código:
   return (
     // objetoUsuario.hasOwnProperty("email") &&
-    objetoUsuario.email !== null &&
-    objetoUsuario.email !== undefined
+    objetoUsuario.email !== null && objetoUsuario.email !== undefined
   );
 }
 
@@ -137,10 +136,18 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
   // PorcentajeDeDescuento ---> 0.2
   // Precio final ---> 8
   // Tu código:
+
+  // objetoProducto.calcularPrecioDescuento = function () {
+  //   const descuento = this.precio * this.porcentajeDeDescuento;
+  //   return this.precio - descuento;
+  // };
+
+  // return objetoProducto;
   objetoProducto.calcularPrecioDescuento = () => {
-    const descuento =
-      objetoProducto.precio * objetoProducto.porcentajeDeDescuento;
-    return objetoProducto.precio - descuento;
+    return (
+      objetoProducto.precio -
+      objetoProducto.precio * objetoProducto.porcentajeDeDescuento
+    );
   };
 
   return objetoProducto;
