@@ -23,6 +23,16 @@ function incrementarPorUno(array) {
   // El arreglo recibido por parámetro contiene números.
   // Retornar un arreglo con los elementos incrementados en +1.
   // Tu código:
+  // 1
+  // let resultado = [];
+  // for (let i = 0; i < array.length; i++) {
+  //   resultado.push(array[i] + 1);
+  // }
+  // return resultado;
+  // 2
+  // return array.map((elemento) => {
+  //   return elemento + 1;
+  // });
   const plusOne = [];
   array.forEach((num) => {
     plusOne.push(num + 1);
@@ -103,6 +113,12 @@ function multiplicarArgumentos() {
 function cuentoElementos(array) {
   // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
   // Tu código:
+  // 1
+  // return array.filter((element) => element > 18).length;
+  // 2
+  // const resultArr = []
+  // array.forEach((element)=>{if(element > 18) resultArr.push(array[element])})
+  // return resultArr
   const resultArr = [];
   for (let i = 0; i < array.length; i++) {
     if (array[i] > 18) resultArr.push(array[i]);
@@ -141,6 +157,14 @@ function mesesDelAño(array) {
   // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
   // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
   // Tu código:
+  // if (
+  //   array.includes("Enero") &&
+  //   array.includes("Marzo") &&
+  //   array.includes("Noviembre")
+  // )
+  //   return ["Marzo", "Noviembre", "Enero"];
+
+  // return "No se encontraron los meses pedidos";
   const mesesPedidos = array.filter(
     (mes) => mes === "Enero" || mes === "Marzo" || mes === "Noviembre"
   );
@@ -188,9 +212,7 @@ function breakStatement(num) {
     num += 2;
     newArray.push(num);
 
-    if (num === i) {
-      return "Se interrumpió la ejecución";
-    }
+    if (num === i) return "Se interrumpió la ejecución";
   }
 
   return newArray;

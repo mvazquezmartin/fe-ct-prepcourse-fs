@@ -17,7 +17,7 @@ function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final del string "str" y retórnalo
   // Ejemplo: "hello world" ---> "hello world!"
   // Tu código:
-  return str + "!";
+  return `${str}!`;
 }
 
 function combinarNombres(nombre, apellido) {
@@ -65,6 +65,29 @@ function esVocal(letra) {
   // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
   // Si no es vocal, tambien debe retornar "Dato incorrecto".
   // Tu código:
+  // 1
+  // switch (letra.toLowerCase()) {
+  //   case 'a':
+  //   case 'e':
+  //   case 'i':
+  //   case 'o':
+  //   case 'u':
+  //     return "Es vocal";
+  //   default:
+  //     return "Dato incorrecto";
+  // 2
+  // const vocales = { 'a': true, 'e': true, 'i': true, 'o': true, 'u': true };
+  // if (letra.length === 1 && vocales[letra.toLowerCase()]) {
+  //   return "Es vocal";
+  // } else {
+  //   return "Dato incorrecto";
+  // }
+  // 3
+  // if (/^[aeiou]$/i.test(letra)) {
+  //   return "Es vocal";
+  // } else {
+  //   return "Dato incorrecto";
+  // }
   const vocales = ["a", "e", "i", "o", "u"];
   const lowerCase = letra.toLowerCase();
   if (vocales.includes(lowerCase)) {
