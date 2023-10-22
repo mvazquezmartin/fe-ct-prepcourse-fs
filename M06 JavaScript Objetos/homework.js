@@ -63,10 +63,11 @@ function tieneEmail(objetoUsuario) {
   // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
   // En ese caso retornar true. Caso contrario, false.
   // Tu código:
-  return (
-    // objetoUsuario.hasOwnProperty("email") &&
-    objetoUsuario.email !== null && objetoUsuario.email !== undefined
-  );
+  // return (
+  //   objetoUsuario.email !== null && objetoUsuario.email !== undefined
+  // );
+
+  return !!objetoUsuario.email;
 }
 
 function tienePropiedad(objeto, propiedad) {
@@ -128,7 +129,10 @@ function sumarLikesDeUsuario(objetoUsuario) {
   // }
   // return totalLikes;
   // 2
-  return objetoUsuario.posts.reduce((totalLikes, post) => {return totalLikes + post.likes, 0});
+  return objetoUsuario.posts.reduce(
+    (totalLikes, post) => totalLikes + post.likes,
+    0
+  );
   // 3
   // let totalLikes = 0;
   // for (const post of objetoUsuario.posts) {

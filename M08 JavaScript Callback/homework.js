@@ -55,6 +55,16 @@ function filter(arrayOfStrings) {
   // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
   // Luego retorna un nuevo arreglo con estos elementos.
   // Tu código:
+  // 1
+  // const arrayReturn = [];
+  // let fisrtLetter;
+  // for (let i = 0; i < arrayStr.length; i++) {
+  //   fisrtLetter = arrayStr[i].charAt(0);
+  //   if (fisrtLetter === "a") {
+  //     arrayReturn.push(arrayStr[i]);
+  //   }
+  // }
+  // return arrayReturn;
   return arrayOfStrings.filter((str) => str.split("")[0] === "a");
 }
 

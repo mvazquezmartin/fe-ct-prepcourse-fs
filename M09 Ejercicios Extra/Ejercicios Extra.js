@@ -6,6 +6,8 @@ function deObjetoAarray(objeto) {
   // Estos elementos debe ser cada par clave:valor del objeto recibido.
   // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
   // Tu código:
+  // 1
+  // return Object.entries(objeto);
   const newArray = [];
   for (const i in objeto) {
     const claveValor = [i, objeto[i]];
@@ -77,11 +79,23 @@ function asAmirror(frase) {
   // Tu código:
   // 1
   // return frase.split(' ').map(palabra => palabra.split('').reverse().join('')).join(' ');
+  // 2
+  // const palabras = frase.split(" ");
+  // const resultado = palabras
+  //   .map((palabra) => palabra.split("").reverse().join(""))
+  //   .join(" ");
+  // return resultado;
   const palabras = frase.split(" ");
-  const resultado = palabras
-    .map((palabra) => palabra.split("").reverse().join(""))
-    .join(" ");
-  return resultado;
+  let stringReturn = "";
+
+  for (let i = 0; i < palabras.length; i++) {
+    let palabraInvertida = "";
+    for (let j = palabras[i].length - 1; j >= 0; j--) {
+      palabraInvertida += palabras[i][j];
+    }
+    stringReturn += palabraInvertida + " ";
+  }
+  return stringReturn.trim();
 }
 
 function capicua(numero) {

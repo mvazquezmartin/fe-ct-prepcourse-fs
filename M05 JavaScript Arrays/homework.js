@@ -9,8 +9,7 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
   // Retornar el último elemento del arreglo recibido por parámetro.
   // Tu código:
-  const lenght = array.length;
-  return array[lenght - 1];
+  return array[array.length - 1];
 }
 
 function obtenerLargoDelArray(array) {
@@ -149,7 +148,11 @@ function todosIguales(array) {
   // Si todos los elementos del arreglo son iguales, retornar true.
   // Caso contrario retornar false.
   // Tu código:
-  return array.every((e) => e === array[0]);
+  // return array.every((e) => e === array[0]);
+  for (let i = 0; i < array.length; i++) {
+    if (array[0] !== array[i]) return false;
+  }
+  return true;
 }
 
 function mesesDelAño(array) {
@@ -157,14 +160,19 @@ function mesesDelAño(array) {
   // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
   // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
   // Tu código:
-  // if (
-  //   array.includes("Enero") &&
-  //   array.includes("Marzo") &&
-  //   array.includes("Noviembre")
-  // )
-  //   return ["Marzo", "Noviembre", "Enero"];
-
-  // return "No se encontraron los meses pedidos";
+  // 1
+  // const arrayReturn = [];
+  // for (let i = 0; i < array.length; i++) {
+  //   if (
+  //     array[i] === "Enero" ||
+  //     array[i] === "Marzo" ||
+  //     array[i] === "Noviembre"
+  //   ) {
+  //     arrayReturn.push(array[i]);
+  //   }
+  // }
+  // if (arrayReturn.length !== 3) return "No se encontraron los meses pedidos";
+  // return arrayReturn;
   const mesesPedidos = array.filter(
     (mes) => mes === "Enero" || mes === "Marzo" || mes === "Noviembre"
   );
@@ -181,8 +189,8 @@ function tablaDelSeis() {
   // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
   // Tu código:
   const sixMulti = [];
-  for (let index = 0; index < 11; index++) {
-    sixMulti.push(6 * index);
+  for (let i = 0; i <= 10; i++) {
+    sixMulti.push(6 * i);
   }
   return sixMulti;
 }
@@ -191,8 +199,13 @@ function mayorACien(array) {
   // La función recibe un arreglo con enteros entre 0 y 200.
   // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
   // Tu código:
-  const numberFilter = array.filter((num) => num > 100);
-  return numberFilter;
+  // 1
+  // const arrayReturn = [];
+  // for (let i = 0; i < array.length; i++) {
+  //   if (array[i] > 100 ) arrayReturn.push(array[i]);
+  // }
+  // return arrayReturn;
+  return array.filter((num) => num > 100);
 }
 
 /* ----------------------------------------------------------------------------------

@@ -28,7 +28,10 @@ function agregarMetodoPrototype(Usuario) {
   // Agrega un método al prototipo de "Usuario".
   // El método debe llamarse "saludar" y debe devolver el string "Hello World!".
   // Tu código:
-  Usuario.prototype.saludar = () => {
+  // Usuario.prototype.saludar = () => {
+  //   return "Hello World!";
+  // };
+  Usuario.prototype.saludar = function () {
     return "Hello World!";
   };
 }
@@ -38,17 +41,16 @@ function agregarStringInvertida() {
   // El método debe llamarse "reverse".
   // [PISTA]: necesitarás utilizar el objeto "this".
   // 1
-  String.prototype.reverse = function () {
-  let reversedString = "";
-  for (let i = this.length - 1; i >= 0; i--) {
-    console.log(this.length[i])
-    reversedString += this[i];
-  }
-  return reversedString;
-  }
   // String.prototype.reverse = function () {
-  //   return this.split("").reverse().join("");
+  //   let reversedString = "";
+  //   for (let i = this.length - 1; i >= 0; i--) {
+  //     reversedString += this[i];
+  //   }
+  //   return reversedString;
   // };
+  String.prototype.reverse = function () {
+    return this.split("").reverse().join("");
+  };
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
