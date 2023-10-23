@@ -61,15 +61,24 @@ function capToFront(string) {
   //   }
   // }
   // return uppercaseChars + lowercaseChars;
-  const uppercaseChars = string
-    .split("")
-    .filter((char) => char === char.toUpperCase())
-    .join("");
-  const lowercaseChars = string
-    .split("")
-    .filter((char) => char === char.toLowerCase())
-    .join("");
-  return uppercaseChars + lowercaseChars;
+  // 3
+  // let uppercaseChars = "";
+  // let lowercaseChars = "";
+  // for (let i = 0; i < string.length; i++) {
+  //   string[i] === string[i].toUpperCase()
+  //     ? (uppercaseChars += string[i])
+  //     : (lowercaseChars += string[i]);
+  // }
+  // return uppercaseChars + lowercaseChars;
+  // const uppercaseChars = string
+  //   .split("")
+  //   .filter((char) => char === char.toUpperCase())
+  //   .join("");
+  // const lowercaseChars = string
+  //   .split("")
+  //   .filter((char) => char === char.toLowerCase())
+  //   .join("");
+  // return uppercaseChars + lowercaseChars;
 }
 
 function asAmirror(frase) {
