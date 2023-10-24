@@ -22,23 +22,33 @@ function numberOfCharacters(string) {
   // Las letras deben estar en orden alfabético.
   // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
   // Tu código:
-
+  // 1
   // const obj = {};
   // for (const char of string) {
   //   obj[char] = obj[char] ? obj[char] + 1 : 1;
   // }
   // return obj;
-
+  // 2
   // return string.split('').reduce((obj, char) => {
   //   obj[char] = obj[char] ? obj[char] + 1 : 1;
   //   return obj;
   // }, {});
-
+  // 3
   const obj = {};
-  string.split("").forEach((char) => {
-    obj[char] = obj[char] ? obj[char] + 1 : 1;
-  });
+  for (let i = 0; i < string.length; i++) {
+    if (obj[string[i]]) {
+      obj[string[i]]+= 1;
+    } else {
+      obj[string[i]] = 1;
+    }
+  }  
   return obj;
+
+  // const obj = {};
+  // string.split("").forEach((char) => {
+  //   obj[char] = obj[char] ? obj[char] + 1 : 1;
+  // });
+  // return obj;
 }
 
 function capToFront(string) {
@@ -70,15 +80,15 @@ function capToFront(string) {
   //     : (lowercaseChars += string[i]);
   // }
   // return uppercaseChars + lowercaseChars;
-  // const uppercaseChars = string
-  //   .split("")
-  //   .filter((char) => char === char.toUpperCase())
-  //   .join("");
-  // const lowercaseChars = string
-  //   .split("")
-  //   .filter((char) => char === char.toLowerCase())
-  //   .join("");
-  // return uppercaseChars + lowercaseChars;
+  const uppercaseChars = string
+    .split("")
+    .filter((char) => char === char.toUpperCase())
+    .join("");
+  const lowercaseChars = string
+    .split("")
+    .filter((char) => char === char.toLowerCase())
+    .join("");
+  return uppercaseChars + lowercaseChars;
 }
 
 function asAmirror(frase) {

@@ -93,6 +93,23 @@ function numeroMasGrande(arrayOfNums) {
   // El parámetro "arrayOfNums" es un arreglo de números.
   // Retornar el número más grande.
   // Tu código:
+  //1
+  // let maxNum = arrayOfNums[0];
+  // for (let i = 1; i < arrayOfNums.length; i++) {
+  //   if (arrayOfNums[i] > maxNum) {
+  //     maxNum = arrayOfNums[i];
+  //   }
+  // }
+  // return maxNum;
+  // 2
+  // return arrayOfNums.reduce(function (max, num) {
+  //   return num > max ? num : max;
+  // }, arrayOfNums[0]);
+  // 3
+  // arrayOfNums.sort(function(a, b) {
+  //   return b - a;
+  // });
+  // return arrayOfNums[0];
   return Math.max(...arrayOfNums);
 }
 
@@ -225,9 +242,10 @@ function breakStatement(num) {
     num += 2;
     newArray.push(num);
 
-    if (num === i) return "Se interrumpió la ejecución";
+    if (num === i) break;
   }
 
+  if (newArray.length < 10) return "Se interrumpió la ejecución";
   return newArray;
 }
 
