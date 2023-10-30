@@ -49,7 +49,11 @@ function agregarStringInvertida() {
   //   return reversedString;
   // };
   String.prototype.reverse = function () {
-    return this.split("").reverse().join("");
+    // return this.split("").reverse().join("");
+    const first = this.split("");
+    const second = first.reverse();
+    const third = second.join("");
+    return third;
   };
 }
 

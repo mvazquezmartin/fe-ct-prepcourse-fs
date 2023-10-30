@@ -159,6 +159,7 @@ function empiezaConNueve(num) {
   // Tu código:
   const toString = num.toString();
   return toString[0] === "9";
+  // return toString.substring(0,1) === "9"
 }
 
 function todosIguales(array) {
@@ -190,15 +191,40 @@ function mesesDelAño(array) {
   // }
   // if (arrayReturn.length !== 3) return "No se encontraron los meses pedidos";
   // return arrayReturn;
-  const mesesPedidos = array.filter(
-    (mes) => mes === "Enero" || mes === "Marzo" || mes === "Noviembre"
-  );
+  // 2
+  // const mesesPedidos = array.filter(
+  //   (mes) => mes === "Enero" || mes === "Marzo" || mes === "Noviembre"
+  // );
 
-  if (mesesPedidos.length === 3) {
-    return mesesPedidos;
-  } else {
-    return "No se encontraron los meses pedidos";
+  // if (mesesPedidos.length === 3) {
+  //   return mesesPedidos;
+  // } else {
+  //   return "No se encontraron los meses pedidos";
+  // }
+  // 3
+  // const mesencontrado = [];
+  // const mesbuscado = ["Marzo", "Noviembre", "Marzo"];
+  // for (let i = 0; i < array.length; i++) {
+  //   if (array.includes(mesbuscado[i])) {
+  //     mesencontrado.push(mesbuscado[i]);
+  //   }
+  // }
+  // if (mesencontrado.length === mesbuscado.length) {
+  //   console.log(mesencontrado);
+  //   return mesencontrado;
+  // } else {
+  //   return "No se encontraron los meses pedidos";
+  // }
+  // 4
+  const mesesBuscados = ["Enero", "Marzo", "Noviembre"];
+  const mesesEncontrados = array.filter((elemento) =>
+    mesesBuscados.includes(elemento)
+  );
+  console.log(mesesEncontrados);
+  if (mesesEncontrados.length === 3) {
+    return mesesEncontrados;
   }
+  return "No se encontraron los meses pedidos";
 }
 
 function tablaDelSeis() {
@@ -239,9 +265,7 @@ function breakStatement(num) {
   const newArray = [];
 
   for (let i = 0; i < 10; i++) {
-    num += 2;
-    newArray.push(num);
-
+    newArray.push((num += 2));
     if (num === i) break;
   }
 
@@ -256,18 +280,33 @@ function continueStatement(num) {
   // se continua con la siguiente iteración.
   // [PISTA]: utiliza el statement 'continue'.
   // Tu código:
-  const newArray = [];
-
-  for (let i = 0; i < 10; i++) {
-    if (i === 5) {
-      continue;
-    }
-
+  // 1
+  // const newArray = [];
+  // for (let i = 0; i < 10; i++) {
+  //   if (i === 5) continue; 
+  //   num += 2;
+  //   newArray.push(num);
+  // }
+  // return newArray;
+  // 2
+  // let conteo = 0;
+  // const arr = [];
+  // do {
+  //   conteo++;
+  //   if (conteo === 5) continue;
+  //   num += 2;
+  //   arr.push(num);
+  // } while (conteo < 10);
+  // return arr;
+  const arr = [];
+  let i = 0;
+  while (i < 10) {
+    i++;
+    if (i === 5) continue;
     num += 2;
-    newArray.push(num);
+    arr.push(num);
   }
-
-  return newArray;
+  return arr;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
