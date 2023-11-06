@@ -7,14 +7,13 @@ function crearGato(nombre, edad) {
   // La propiedad "meow" será una función que retorne el string: "Meow!".
   // Retornar el objeto.
   // Tu código:
-  const newObj = {
+  return {
     nombre,
     edad,
     meow: () => {
       return "Meow!";
     },
   };
-  return newObj;
 }
 
 function nuevoUsuario(nombre, email, password) {
@@ -22,8 +21,7 @@ function nuevoUsuario(nombre, email, password) {
   // Este debe tener las propiedades: "nombre", "email" y "password" con sus respectivos valores.
   // Retornar el objeto.
   // Tu código:
-  const newObj = { nombre, email, password };
-  return newObj;
+  return { nombre, email, password };
 }
 
 function agregarPropiedad(objeto, propiedad) {

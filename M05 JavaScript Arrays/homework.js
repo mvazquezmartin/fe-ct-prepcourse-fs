@@ -135,11 +135,14 @@ function cuentoElementos(array) {
   // const resultArr = []
   // array.forEach((element)=>{if(element > 18) resultArr.push(array[element])})
   // return resultArr
-  const resultArr = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] > 18) resultArr.push(array[i]);
-  }
-  return resultArr.length;
+  // const resultArr = [];
+  // for (let i = 0; i < array.length; i++) {
+  //   if (array[i] > 18) resultArr.push(array[i]);
+  // }
+  // return resultArr.length;
+  const elementos = array.filter(function(n){return n > 18})
+  console.log(elementos)
+  return elementos.length
 }
 
 function diaDeLaSemana(numeroDeDia) {
@@ -281,13 +284,13 @@ function continueStatement(num) {
   // [PISTA]: utiliza el statement 'continue'.
   // Tu código:
   // 1
-  // const newArray = [];
-  // for (let i = 0; i < 10; i++) {
-  //   if (i === 5) continue; 
-  //   num += 2;
-  //   newArray.push(num);
-  // }
-  // return newArray;
+  const newArray = [];
+  for (let i = 0; i < 10; i++) {
+    if (i === 5) continue; 
+    num += 2;
+    newArray.push(num);
+  }
+  return newArray;
   // 2
   // let conteo = 0;
   // const arr = [];
@@ -298,15 +301,15 @@ function continueStatement(num) {
   //   arr.push(num);
   // } while (conteo < 10);
   // return arr;
-  const arr = [];
-  let i = 0;
-  while (i < 10) {
-    i++;
-    if (i === 5) continue;
-    num += 2;
-    arr.push(num);
-  }
-  return arr;
+  // const arr = [];
+  // let i = 0;
+  // while (i < 10) {
+  //   i++;
+  //   if (i === 5) continue;
+  //   num += 2;
+  //   arr.push(num);
+  // }
+  // return arr;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

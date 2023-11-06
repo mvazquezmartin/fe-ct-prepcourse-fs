@@ -5,8 +5,9 @@ function obtenerMayor(x, y) {
   // Retornar el número más grande.
   // Si son iguales, retornar cualquiera de los dos.
   // Tu código:
-  if (x > y) return x;
-  return y;
+  // if (x > y) return x;
+  // return y;
+  return x > y ? x : y;
 }
 
 function mayoriaDeEdad(edad) {
@@ -14,8 +15,7 @@ function mayoriaDeEdad(edad) {
   // Si tiene 18 años ó más debe retornar el string: "Allowed".
   // Caso contrario: "Not allowed".
   // Tu código:
-  if (edad >= 18) return "Allowed";
-  return "Not allowed";
+  return edad >= 18 ? "Allowed" : "Not allowed";
 }
 
 function conection(status) {
@@ -74,16 +74,14 @@ function esDiezOCinco(num) {
   // Retornar true si "num" es 10 o 5.
   // De lo contrario, retornar false.
   // Tu código:
-  if (num === 10 || num === 5) return true;
-  return false;
+  return num === 10 || num === 5;
 }
 
 function estaEnRango(num) {
   // Retornar true si "num" es menor que 50 y mayor que 20.
   // De lo contrario, retornar false.
   // Tu código:
-  if (num > 20 && num < 50) return true;
-  return false;
+  return num > 20 && num < 50;
 }
 
 function esEntero(num) {
@@ -145,16 +143,16 @@ function esVerdadero(valor) {
   // Si "valor" es verdadero retornar "Soy verdadero".
   // Caso contrario, retornar "Soy falso".
   // Tu código:
-  if (valor) return "Soy verdadero";
-  return "Soy falso";
+  return valor ? "Soy verdadero" : "Soy falso";
 }
 
 function tieneTresDigitos(num) {
   // Si el número recibido tiene tres dígitos retornar true.
   // Caso contrario, retornar false.
   // Tu código:
-  if (num >= 100 && num <= 999) return true;
-  return false;
+  // if (num >= 100 && num <= 999) return true;
+  // return false;
+  return num.toString().length === 3;
 }
 
 function doWhile(num) {

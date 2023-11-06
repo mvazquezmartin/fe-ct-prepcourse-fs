@@ -1,29 +1,7 @@
-var ok = [
-  "Marzo",
-  "Diciembre",
-  "Abril",
-  "Junio",
-  "Julio",
-  "Noviembre",
-  "Enero",
-  "Mayo",
-  "Febrero",
-];
-var notOk = ["Marzo", "Diciembre", "Julio", "Noviembre"];
-function mesesDelAño(array) {
-  // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
-  // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
-  // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
-  // Tu código:
-  const filter = array.filter(
-    (elemento) =>
-      elemento === "Enero" || elemento === "Marzo" || elemento === "Noviembre"
-  );
-  if (filter.length === 3) {
-    return filter;
-  }
-  return "No se encontraron los meses pedidos";
+function findUniq(arr) {
+  return arr.filter(
+    (num) => arr.indexOf(num) === arr.lastIndexOf(num)
+  )[0];
 }
 
-console.log(mesesDelAño(ok));
-console.log(mesesDelAño(notOk))
+console.log(findUniq([1, 1, 1, 2, 1, 1]));
