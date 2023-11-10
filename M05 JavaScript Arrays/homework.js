@@ -140,9 +140,11 @@ function cuentoElementos(array) {
   //   if (array[i] > 18) resultArr.push(array[i]);
   // }
   // return resultArr.length;
-  const elementos = array.filter(function(n){return n > 18})
-  console.log(elementos)
-  return elementos.length
+  const elementos = array.filter(function (n) {
+    return n > 18;
+  });
+  console.log(elementos);
+  return elementos.length;
 }
 
 function diaDeLaSemana(numeroDeDia) {
@@ -151,9 +153,7 @@ function diaDeLaSemana(numeroDeDia) {
   // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
   // Tu código:
   if (numeroDeDia === 1 || numeroDeDia === 7) return "Es fin de semana";
-  if (numeroDeDia >= 2 && numeroDeDia <= 6) return "Es dia laboral";
-
-  return "Número de día inválido";
+  return "Es dia laboral";
 }
 
 function empiezaConNueve(num) {
@@ -265,14 +265,35 @@ function breakStatement(num) {
   // la ejecución y retornar el string: "Se interrumpió la ejecución".
   // [PISTA]: utiliza el statement 'break'.
   // Tu código:
+  // const newArray = [];
+
+  // for (let i = 0; i < 10; i++) {
+  //   num += 2
+  //   newArray.push((num));
+  //   if (num === i) break;
+  // }
+
+  // if (newArray.length < 10) return "Se interrumpió la ejecución";
+  // return newArray;
+  // const newArray = [];
+  // for (let i = 1; i <= 10; i++) {
+  //   newArray.push((num += 2));
+  //   if (num === i) return "Se interrumpió la ejecución";
+  // }
+  // return newArray;
   const newArray = [];
+  let iterations = 0;
 
-  for (let i = 0; i < 10; i++) {
-    newArray.push((num += 2));
-    if (num === i) break;
-  }
+  do {
+    num += 2;
+    newArray.push(num);
+    iterations++;
 
-  if (newArray.length < 10) return "Se interrumpió la ejecución";
+    if (num === iterations) {
+      return "Se interrumpió la ejecución";
+    }
+  } while (iterations < 10);
+
   return newArray;
 }
 
@@ -286,7 +307,7 @@ function continueStatement(num) {
   // 1
   const newArray = [];
   for (let i = 0; i < 10; i++) {
-    if (i === 5) continue; 
+    if (i === 5) continue;
     num += 2;
     newArray.push(num);
   }

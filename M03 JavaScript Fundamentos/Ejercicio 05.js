@@ -76,27 +76,17 @@ function esVocal(letra) {
   //   default:
   //     return "Dato incorrecto";
   // 2
-  // const vocales = { 'a': true, 'e': true, 'i': true, 'o': true, 'u': true };
-  // if (letra.length === 1 && vocales[letra.toLowerCase()]) {
-  //   return "Es vocal";
-  // } else {
+  const vocales = { 'a': true, 'e': true, 'i': true, 'o': true, 'u': true };
+  if (letra.length === 1 && vocales[letra.toLowerCase()]) return "Es vocal";  
+    return "Dato incorrecto";  
+  // 3  
+  // if (/^[aeiou]$/i.test(letra)) return "Es vocal";  
   //   return "Dato incorrecto";
-  // }
-  // 3
-  // if (/^[aeiou]$/i.test(letra)) {
-  //   return "Es vocal";
-  // } else {
-  //   return "Dato incorrecto";
-  // }
-  const vocales = ["a", "e", "i", "o", "u"];
-  const lowerCase = letra.toLowerCase();
-  if (vocales.includes(lowerCase)) {
-    return "Es vocal";
-  } else if (lowerCase.length !== 1) {
-    return "Dato incorrecto";
-  } else {
-    return "Dato incorrecto";
-  }
+
+  // const vocales = ["a", "e", "i", "o", "u"];
+  // const lowerCase = letra.toLowerCase();
+  // if (lowerCase.length === 1 && vocales.includes(lowerCase)) return "Es vocal";
+  // return "Dato incorrecto";
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

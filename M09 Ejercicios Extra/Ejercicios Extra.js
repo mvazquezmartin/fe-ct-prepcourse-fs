@@ -57,6 +57,7 @@ function numberOfCharacters(string) {
       obj[string[i]] = 1;
     }
   }
+  console.log(obj)
   return obj;
 }
 
