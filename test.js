@@ -1,15 +1,21 @@
-Array.prototype.Change = function () {
-  const arrReturn = [];
-  for (let i = 0; i < this.length; i++) {
-    if (this[i] > 3) {
-      arrReturn.push(false);
-    } else {
-      arrReturn.push(true)
-    }
-  }
-  return arrReturn
-};
+function tradicionalFunction() {
+  console.log("Function:",this);
+}
 
-const elements = [1,3,4,33,55,2,-1]
+const obj1 = { key: 'value' };
 
-console.log(elements.Change())
+obj1.tradicionalMethod = tradicionalFunction;
+obj1.tradicionalMethod(); // 'this' se refiere a 'obj'
+
+tradicionalFunction(); // 'this' se refiere al objeto global (por ejemplo, 'window' en el navegador)
+
+const arrowFunction = () => {
+  console.log("Arrow:",this);
+}
+
+const obj = { key: 'value' };
+
+obj.arrowMethod = arrowFunction;
+obj.arrowMethod(); // 'this' se refiere al valor de 'this' en el ámbito circundante, que puede ser 'undefined'
+
+arrowFunction(); 

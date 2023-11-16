@@ -3,13 +3,15 @@
 function devolverPrimerElemento(array) {
   // Retornar el primer elemento del arreglo recibido por parámetro.
   // Tu código:
-  return array[0];
+  // return array[0];
+  return array.shift();
 }
 
 function devolverUltimoElemento(array) {
   // Retornar el último elemento del arreglo recibido por parámetro.
   // Tu código:
-  return array[array.length - 1];
+  // return array[array.length - 1];
+  return array.pop();
 }
 
 function obtenerLargoDelArray(array) {
@@ -68,6 +70,13 @@ function arrayContiene(array, elemento) {
   // Verifica si el elemento existe dentro del arreglo recibido.
   // Retornar true si está, o false si no está.
   // Tu código:
+  // 1
+  // for (let i = 0; i < array.length; i++) {
+  //   if (array[i] === elemento) {
+  //     return true;
+  //   }
+  // }
+  // return false;
   return array.includes(elemento);
 }
 
@@ -234,6 +243,14 @@ function tablaDelSeis() {
   // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
   // Tu código:
+  // 1
+  // const sixMulti = [];
+  // let i = 0;
+  // while (i <= 10) {
+  //   sixMulti.push(6 * i);
+  //   i++;
+  // }
+  // return sixMulti;
   const sixMulti = [];
   for (let i = 0; i <= 10; i++) {
     sixMulti.push(6 * i);

@@ -8,6 +8,7 @@ function esPositivo(num) {
   // Si el número es negativo ---> "Es negativo".
   // Si el número es 0, devuelve false.
   // Tu código:
+  // return (num === 0) ? false : (num > 0) ? "Es positivo" : "Es negativo";
   if (num === 0) return false;
   if (num > 0) return "Es positivo";
   return "Es negativo";
@@ -76,11 +77,11 @@ function esVocal(letra) {
   //   default:
   //     return "Dato incorrecto";
   // 2
-  const vocales = { 'a': true, 'e': true, 'i': true, 'o': true, 'u': true };
-  if (letra.length === 1 && vocales[letra.toLowerCase()]) return "Es vocal";  
-    return "Dato incorrecto";  
-  // 3  
-  // if (/^[aeiou]$/i.test(letra)) return "Es vocal";  
+  const vocales = { a: true, e: true, i: true, o: true, u: true };
+  if (letra.length === 1 && vocales[letra.toLowerCase()]) return "Es vocal";
+  return "Dato incorrecto";
+  // 3
+  // if (/^[aeiou]$/i.test(letra)) return "Es vocal";
   //   return "Dato incorrecto";
 
   // const vocales = ["a", "e", "i", "o", "u"];
