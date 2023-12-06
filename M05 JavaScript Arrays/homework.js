@@ -244,18 +244,19 @@ function tablaDelSeis() {
   // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
   // Tu código:
   // 1
-  // const sixMulti = [];
-  // let i = 0;
-  // while (i <= 10) {
-  //   sixMulti.push(6 * i);
-  //   i++;
-  // }
-  // return sixMulti;
   const sixMulti = [];
-  for (let i = 0; i <= 10; i++) {
+  let i = 0;
+  while (i <= 10) {
     sixMulti.push(6 * i);
+    i++;
   }
   return sixMulti;
+
+  // const sixMulti = [];
+  // for (let i = 0; i <= 10; i++) {
+  //   sixMulti.push(6 * i);
+  // }
+  // return sixMulti;
 }
 
 function mayorACien(array) {

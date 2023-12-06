@@ -57,7 +57,7 @@ function numberOfCharacters(string) {
       obj[string[i]] = 1;
     }
   }
-  console.log(obj)
+  console.log(obj);
   return obj;
 }
 
@@ -189,7 +189,14 @@ function buscoInterseccion(array1, array2) {
   //   return resultado;
   // }, []);
   // return interseccion;
-  return array1.filter((elemento) => array2.includes(elemento));
+  // return array1.filter((elemento) => array2.includes(elemento));
+  const arr = [];
+  for (let i = 0; i < array1.length; i++) {
+    for (let j = 0; j < array2.length; j++) {
+      if (array1[i] === array2[j]) arr.push(array1[i]);
+    }
+  }
+  return arr;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

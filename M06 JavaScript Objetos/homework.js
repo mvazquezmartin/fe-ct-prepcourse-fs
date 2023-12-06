@@ -39,7 +39,9 @@ function invocarMetodo(objeto, metodo) {
   // Esta propiedad contiene una función en su interior. Debes invocarla/ejecutarla.
   // [NOTA]: no necesitar retornar nada.
   // Tu código:
-  objeto[metodo]();
+  // objeto[metodo]();
+  const invocar = objeto[metodo]
+  invocar.call(objeto)
 }
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
