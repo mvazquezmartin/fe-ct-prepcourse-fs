@@ -1,5 +1,7 @@
-function stray(numbers) {
-  return numbers.reduce((result, num) => result ^ num, 0);
-}
+String.prototype.toJadenCase = function () {
+  return this.split(" ")
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
+};
 
-console.log(stray([17, 17, 17, 3, 17, 17, 17]));
+console.log("How can mirrors be real if our eyes aren't real".toJadenCase());
