@@ -1,7 +1,12 @@
-String.prototype.toJadenCase = function () {
-  return this.split(" ")
-    .map((word) => word[0].toUpperCase() + word.slice(1))
-    .join(" ");
-};
+function defineSuit(card) {
+  const obj = {
+    "♣" : "clubs",
+    "♦" : "diamonds",
+    "♥" : "hearts",
+    "♠" : "spades"    
+  }
+  
+  return obj[card[card.length - 1]]
+}
 
-console.log("How can mirrors be real if our eyes aren't real".toJadenCase());
+console.log(defineSuit('10♠'))

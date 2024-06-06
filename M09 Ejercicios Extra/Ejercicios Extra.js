@@ -171,7 +171,7 @@ function sortArray(arrayOfStrings) {
   // Tu código:
   // 1
   // return arrayOfStrings.map(str => str).sort((a, b) => a.length - b.length);
-  return arrayOfStrings.sort((a, b) => a.length - b.length);
+  
 }
 
 function buscoInterseccion(array1, array2) {
